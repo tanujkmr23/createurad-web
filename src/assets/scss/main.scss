@@ -1,0 +1,154 @@
+body{
+    background: #8080803b;
+    height: 100%;
+}
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 100%;
+  }
+  @media only screen and (max-width: 600px) {
+    #app {
+      padding: 16px;
+    }
+  }
+.university-header {
+    padding: 32px 0;
+    .university-title {
+      color: #255C5B;
+      font-family: inherit;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0;
+      line-height: 32px;
+    }
+  
+    .filter{
+      .first-child {
+        border: 1px solid #255C5B;
+        border-radius: 4;
+        color: #255C5B;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 24pxrem;
+        padding: 4px 19px;
+        margin: 4px;
+  
+        i {
+          position: absolute;
+          right: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  
+    .add-university-button {
+      button {
+        border-radius: 4px;
+        background-color: #255C5B;
+        border: none;
+        color: #FFFFFF;
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 24px;
+        padding: 6px 16px;
+        margin: 4px 0 4px 4px;
+  
+        &:focus {
+          text-decoration: none;
+        }
+  
+        i {
+          .mdi::before {
+            font-size: 16px;
+          }
+  
+        }
+      }
+    }
+    .search-box {
+      padding: 20px 0 0 0;
+      justify-content: center;
+      display: flex;
+      input {
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+        border-color: white;
+  
+        &:focus {
+          border-color: white;
+          outline: none;
+        }
+        &.uk-input:focus {
+          border-color: white;
+          outline: none;
+        }
+  
+      }
+      .uk-button-primary {
+        box-shadow: 0 1px 4px 0 #255c5b79;
+        border-color: #255C5B;
+        padding: 0 30px;
+        font-size: 20px;
+        background-color: #255C5B;
+      }
+  
+      .mdi {
+        color: #ffffff;
+      }
+    }
+  
+  }
+  .uk-button {
+    &.uk-pagination-button {
+        padding: 10px;
+        line-height: 10px;
+        margin: 0 4px;
+        background: #80808091;
+        color: black;
+        &.active {
+            background-color: #255C5B;
+            color: white;
+        }
+  }
+}
+
+/*
+Spinner classes added
+*/
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.8) url("../loader/loader.gif") center no-repeat;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+/* Make spinner image visible when body element has the loading class */
+body.loading .overlay {
+    display: block;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
